@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Caleb Adeyemi Adeleye</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body data-page="projects">
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">CAA</a>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <p class="page-breadcrumb"><a href="index.html">Home</a> / Projects</p>
+      <h1 class="page-hero-title">Current Projects</h1>
+      <p class="page-hero-sub">
+        Active research and collaborative work I am currently involved in.
+      </p>
+    </div>
+  </div>
+
+  <!-- Project 1: Hollow Fiber Membrane -->
+  <section class="page-section">
+    <div class="container">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badge">Research · 2026</div>
+          <h2 class="project-title">Simulation of Hollow-Fiber Membrane Module for Point Source Carbon Capture</h2>
+          <div class="project-meta-row">
+            <span class="project-role">Graduate Research Assistant</span>
+            <span class="project-collab">with Prof. Miao-Jung Yvonne Ou (Advisor) &amp; Dr. Robert DeJaco (Ardent Process Technologies)</span>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-section">
+            <h3>Overview</h3>
+            <p>
+              This project develops a mathematical model of a hollow-fiber membrane module designed for
+              point-source carbon capture. The system separates CO₂ from N₂ by exploiting selective
+              permeability across a membrane separating concentric lumen and shell regions.
+              The governing equations are discretized and implemented in <strong>FEniCS</strong>.
+            </p>
+          </div>
+
+          <div class="project-confidential">
+            <span class="confidential-icon">🔒</span>
+            <p>I will be happy to discuss more if needed</p>
+          </div>
+
+
+          <div class="project-tags">
+            <span>FEniCS</span><span>Navier–Stokes</span><span>Maxwell–Stefan</span>
+            <span>Carbon Capture</span><span>PDE Simulation</span><span>Variational Methods</span>
+            <span>MATLAB</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project 2: SUM Innovation -->
+  <section class="page-section section-alt">
+    <div class="container">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-badge project-badge-purple">Collaborative · 2026</div>
+          <h2 class="project-title">SUM Innovation — Decentralized Infrastructure for AGI</h2>
+          <div class="project-meta-row">
+            <span class="project-role">Collaborator</span>
+            <span class="project-collab">SUM Chain · OmniNode Protocol</span>
+          </div>
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-section">
+            <h3>The Problem</h3>
+            <p>
+              Three hyperscalers control 85%+ of global AI compute. Running a 70B model requires $30K+ in GPU
+              hardware that sits idle 90% of the time. Every inference request sends private data to corporate
+              servers — creating cost barriers, data sovereignty risks, and single points of failure.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h3>Two Interconnected Systems</h3>
+            <div class="project-cols">
+
+              <div class="sum-pillar">
+                <div class="sum-pillar-head">
+                  <span class="sum-icon">⬡</span>
+                  <h4>OmniNode Protocol</h4>
+                </div>
+                <p>A peer-to-peer AI inference network written in <strong>100% Rust</strong> that distributes
+                  LLM execution across consumer hardware using pipeline parallelism.</p>
+                <ul class="project-list">
+                  <li>Model layers sharded across devices over a P2P mesh</li>
+                  <li>Federated learning — only gradients leave the device, never raw data</li>
+                  <li>zkML proofs verify correct inference</li>
+                </ul>
+              </div>
+
+              <div class="sum-pillar">
+                <div class="sum-pillar-head">
+                  <span class="sum-icon">Ϙ</span>
+                  <h4>SUM Chain (L1 Blockchain)</h4>
+                </div>
+                <p>A fixed-supply, immediate-finality blockchain underpinning the network economy.
+                  Guiding principle: <em>"do not trust us; trust math."</em></p>
+                <ul class="project-list">
+                  <li>Native currency Koppa (Ϙ) with fixed supply and deflationary fee burn</li>
+                  <li>Tendermint-style BFT consensus with immediate finality</li>
+                  <li>Native NFTs for certified document tokenization — no smart contracts needed</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="project-tags">
+            <span>Rust</span><span>libp2p</span><span>QUIC</span><span>zkML</span>
+            <span>Blockchain</span><span>LLM Inference</span><span>FEniCS</span>
+            <span>BFT Consensus</span><span>Pipeline Parallelism</span><span>BLAKE3</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Caleb Adeyemi Adeleye · Newark, Delaware</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
