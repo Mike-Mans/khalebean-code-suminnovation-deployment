@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body data-page="projects">
 
@@ -30,21 +30,98 @@
   <div class="page-hero">
     <div class="container">
       <p class="page-breadcrumb"><a href="index.html">Home</a> / Projects</p>
-      <h1 class="page-hero-title">Current Projects</h1>
+      <h1 class="page-hero-title">What I'm Building</h1>
       <p class="page-hero-sub">
-        Active research and collaborative work I am currently involved in.
+        Two tracks running in parallel — sovereign decentralized infrastructure for AI, and the PDE simulation work that pays the rent on rigor.
       </p>
     </div>
   </div>
 
-  <!-- Project 1: Hollow Fiber Membrane -->
+  <!-- Project 2: SUM Innovation (now first) -->
   <section class="page-section">
     <div class="container">
 
       <div class="project-card">
         <div class="project-header">
+          <div class="project-badge project-badge-purple">Co-founder · Shipping 2026</div>
+          <h2 class="project-title">SUM Innovation — Sovereign Infrastructure for the Post-Hyperscaler Era</h2>
+          <div class="project-meta-row">
+            <span class="project-role">Co-founder</span>
+            <span class="project-collab">SUM Chain (L1) · OmniNode Protocol</span>
+          </div>
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-section">
+            <h3>The Thesis</h3>
+            <p>
+              Three hyperscalers run 85%+ of the world's AI compute. A 70B model needs $30K of GPU
+              hardware that idles 90% of the day. Every prompt ships private data to a corporate
+              server. Cost barrier, sovereignty risk, single point of failure — pick three.
+            </p>
+            <p>
+              SUM Innovation is the bet that the next decade of intelligence shouldn't run on
+              rented racks. We're building two interlocked systems — a chain and a network — so
+              compute becomes as decentralized as the people using it. <em>Don't trust us. Trust math.</em>
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h3>Two Systems, One Stack</h3>
+            <div class="project-cols">
+
+              <div class="sum-pillar">
+                <div class="sum-pillar-head">
+                  <span class="sum-icon">⬡</span>
+                  <h4>OmniNode Protocol</h4>
+                </div>
+                <p>A peer-to-peer LLM inference network in <strong>100% Rust</strong> — splits model
+                  layers across consumer hardware over a P2P mesh. Pipeline parallelism, federated
+                  learning, verifiable execution.</p>
+                <ul class="project-list">
+                  <li>Sharded layers across heterogeneous devices via libp2p + QUIC</li>
+                  <li>Federated training — gradients leave the device, raw data never does</li>
+                  <li>zkML proofs so you can verify the inference you paid for</li>
+                </ul>
+              </div>
+
+              <div class="sum-pillar">
+                <div class="sum-pillar-head">
+                  <span class="sum-icon">Ϙ</span>
+                  <h4>SUM Chain · L1 Blockchain</h4>
+                </div>
+                <p>Fixed-supply, immediate-finality L1 powering the network's economy. BFT consensus,
+                  native NFTs, no smart-contract surface to exploit. Engineered for restraint.</p>
+                <ul class="project-list">
+                  <li>Native currency <strong>Koppa (Ϙ)</strong> — fixed supply, deflationary fee burn</li>
+                  <li>Tendermint-style BFT consensus with immediate finality</li>
+                  <li>Native NFTs for certified document tokenization — no Solidity required</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="project-tags">
+            <span>Rust</span><span>libp2p</span><span>QUIC</span><span>zkML</span>
+            <span>L1 Blockchain</span><span>Federated Learning</span><span>Pipeline Parallelism</span>
+            <span>BFT Consensus</span><span>BLAKE3</span><span>P2P Inference</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project 1: Hollow Fiber Membrane -->
+  <section class="page-section section-alt">
+    <div class="container">
+
+      <div class="project-card">
+        <div class="project-header">
           <div class="project-badge">Research · 2026</div>
-          <h2 class="project-title">Simulation of Hollow-Fiber Membrane Module for Point Source Carbon Capture</h2>
+          <h2 class="project-title">Hollow-Fiber Membrane Simulation for Point-Source Carbon Capture</h2>
           <div class="project-meta-row">
             <span class="project-role">Graduate Research Assistant</span>
             <span class="project-collab">with Prof. Miao-Jung Yvonne Ou (Advisor) &amp; Dr. Robert DeJaco (Ardent Process Technologies)</span>
@@ -53,18 +130,19 @@
 
         <div class="project-body">
           <div class="project-section">
-            <h3>Overview</h3>
+            <h3>What It Does</h3>
             <p>
-              This project develops a mathematical model of a hollow-fiber membrane module designed for
-              point-source carbon capture. The system separates CO₂ from N₂ by exploiting selective
-              permeability across a membrane separating concentric lumen and shell regions.
-              The governing equations are discretized and implemented in <strong>FEniCS</strong>.
+              A first-principles model of a hollow-fiber membrane module separating CO₂ from N₂
+              by selective permeability across a membrane between concentric lumen and shell
+              regions. Governing equations discretized in <strong>FEniCS</strong> — variational
+              methods, Navier–Stokes coupling, Maxwell–Stefan transport. PDE work that has to
+              actually solve, not just typecheck.
             </p>
           </div>
 
           <div class="project-confidential">
             <span class="confidential-icon">🔒</span>
-            <p>I will be happy to discuss more if needed</p>
+            <p>Some of this is under NDA — happy to walk through the parts I can share.</p>
           </div>
 
 
@@ -79,79 +157,8 @@
     </div>
   </section>
 
-  <!-- Project 2: SUM Innovation -->
-  <section class="page-section section-alt">
-    <div class="container">
-
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-badge project-badge-purple">Collaborative · 2026</div>
-          <h2 class="project-title">SUM Innovation — Decentralized Infrastructure for AGI</h2>
-          <div class="project-meta-row">
-            <span class="project-role">Collaborator</span>
-            <span class="project-collab">SUM Chain · OmniNode Protocol</span>
-          </div>
-        </div>
-
-        <div class="project-body">
-
-          <div class="project-section">
-            <h3>The Problem</h3>
-            <p>
-              Three hyperscalers control 85%+ of global AI compute. Running a 70B model requires $30K+ in GPU
-              hardware that sits idle 90% of the time. Every inference request sends private data to corporate
-              servers — creating cost barriers, data sovereignty risks, and single points of failure.
-            </p>
-          </div>
-
-          <div class="project-section">
-            <h3>Two Interconnected Systems</h3>
-            <div class="project-cols">
-
-              <div class="sum-pillar">
-                <div class="sum-pillar-head">
-                  <span class="sum-icon">⬡</span>
-                  <h4>OmniNode Protocol</h4>
-                </div>
-                <p>A peer-to-peer AI inference network written in <strong>100% Rust</strong> that distributes
-                  LLM execution across consumer hardware using pipeline parallelism.</p>
-                <ul class="project-list">
-                  <li>Model layers sharded across devices over a P2P mesh</li>
-                  <li>Federated learning — only gradients leave the device, never raw data</li>
-                  <li>zkML proofs verify correct inference</li>
-                </ul>
-              </div>
-
-              <div class="sum-pillar">
-                <div class="sum-pillar-head">
-                  <span class="sum-icon">Ϙ</span>
-                  <h4>SUM Chain (L1 Blockchain)</h4>
-                </div>
-                <p>A fixed-supply, immediate-finality blockchain underpinning the network economy.
-                  Guiding principle: <em>"do not trust us; trust math."</em></p>
-                <ul class="project-list">
-                  <li>Native currency Koppa (Ϙ) with fixed supply and deflationary fee burn</li>
-                  <li>Tendermint-style BFT consensus with immediate finality</li>
-                  <li>Native NFTs for certified document tokenization — no smart contracts needed</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="project-tags">
-            <span>Rust</span><span>libp2p</span><span>QUIC</span><span>zkML</span>
-            <span>Blockchain</span><span>LLM Inference</span><span>FEniCS</span>
-            <span>BFT Consensus</span><span>Pipeline Parallelism</span><span>BLAKE3</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <footer class="footer">
-    <p>&copy; 2026 Caleb Adeyemi Adeleye · Newark, Delaware</p>
+    <p>&copy; 2026 Caleb Adeyemi Adeleye · Building SUM Innovation · Newark, Delaware</p>
   </footer>
 
   <script src="assets/js/main.js"></script>

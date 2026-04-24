@@ -41,6 +41,26 @@ if (heroStatement) {
   setTimeout(typeWord, 400);
 }
 
+// Click-to-copy on the SUM Chain address card (contact page)
+const sumAddress = document.getElementById('sumAddress');
+if (sumAddress) {
+  const valueEl = sumAddress.querySelector('.cd-value');
+  const labelEl = sumAddress.querySelector('.cd-label');
+  const copy = async () => {
+    if (!valueEl || !labelEl) return;
+    try {
+      await navigator.clipboard.writeText(valueEl.textContent.trim());
+      const original = labelEl.textContent;
+      labelEl.textContent = 'Copied ✓';
+      setTimeout(() => { labelEl.textContent = original; }, 1400);
+    } catch (_) { /* ignore */ }
+  };
+  sumAddress.addEventListener('click', copy);
+  sumAddress.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copy(); }
+  });
+}
+
 // Fade-in on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
